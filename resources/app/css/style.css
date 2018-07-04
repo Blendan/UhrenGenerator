@@ -259,6 +259,31 @@ footer {
   display: inline;
 }
 
+#save {
+  background: white;
+  border: 2px solid white;
+  z-index: 500;
+  position: fixed;
+  right: 10%;
+  top: -50%;
+  width: 100px;
+  height: 100px;
+  transition: all 1.3s;
+  border-radius: 5%;
+  padding: 0;
+  margin: 0;
+}
+
+#save img {
+  width: 100px;
+  height: 100px;
+}
+
+#save:hover {
+  animation-name: wakeln;
+  animation-duration: 0.5s;
+}
+
 #zurück {
   background: none;
   border: 2px solid white;

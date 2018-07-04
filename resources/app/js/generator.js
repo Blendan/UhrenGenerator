@@ -5,6 +5,7 @@ function GeneratorEND()
   document.getElementById("Generator").style.top = "-100%";
   document.getElementById("rest").classList.toggle("hide");
   document.getElementById("zurück").style.top = "-50%";
+  document.getElementById("save").style.top = "-50%";
 }
 
 function GeneratorMaster()
@@ -12,6 +13,7 @@ function GeneratorMaster()
   document.getElementById("Generator").style.top = "0%";
   document.getElementById("rest").classList.toggle("hide");
   document.getElementById("zurück").style.top = "2%";
+  document.getElementById("save").style.top = "2%";
 
   var farbe = document.getElementById("color_schatten").value;
 
