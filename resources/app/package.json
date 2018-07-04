@@ -1,0 +1,35 @@
+{
+  "name": "Uhren_Generator",
+  "version": "1.0.0",
+  "description": "Gernerier Uhren",
+  "main": "main.js",
+  "devDependencies": {
+        "electron-builder": "~5.12.X",
+        "electron-prebuilt": "~1.2.X"
+    },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+
+  },
+  "repository": "",
+  "keywords": [
+    "Uhr",
+    "Generator"
+  ],
+  "build": {
+  "appId": "Generator.exe",
+  "mac": {
+    "category": "your.app.category.type"
+    }
+  },
+  "author": "Blendan",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "file": "test"
+}
