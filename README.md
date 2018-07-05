@@ -1,18 +1,16 @@
-# UhrenGenerrator
-This Generator is abel to gererate you a Clock an give you the raw HTML code of the Clock.
+# UhrenGenerator
+This Generator allows you to customize the look of an analog clock and generates the HTML code of your style.
 
 ## How to use
 
-You can just play around wiht the values and colors bei cliking on them and changing them. 
-When your deon just hit Generate and coppy the code in a .html file.
+You can play around with the values and colors by clicking on them and changing them.  
+When you're done, just hit Generate and copy the code into an .html file.
 
-# Versions
+## Versions
 
-### Upcomming 1.0.1
+### Upcoming in 1.0.1
 - save directly as file
 - new look
-- sliders instad of text boxes
+- sliders instead of text boxes
 
-### 1.0.0
-
-#### release
+### Initial Release - 1.0.0
