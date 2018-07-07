@@ -1,6 +1,3 @@
-var app = require('electron').remote;
-dialog = app.dialog;
-
 function gernireOutput()
 {
   if (zeigeranzBS)
@@ -332,12 +329,20 @@ function gernireOutput()
 
 function saveFile()
 {
-  // fileName is a string that contains the path and filename created in the save file dialog.
-  fs.writeFile("Clock.html", gernireOutput(), (err) => {
-      if(err){
-          alert("An error ocurred creating the file "+ err.message)
+  var fileName = "Clock.html";
+  alert("Plese Save as .html");
+  require('electron').remote.dialog.showSaveDialog((fileName) => {
+      if (fileName === undefined)
+      {
+          return;
       }
 
-      alert("The file has been succesfully saved");
+      // fileName is a string that contains the path and filename created in the save file dialog.
+      fs.writeFile(fileName, gernireOutput(), (err) => {
+          if(err)
+          {
+              alert("An error ocurred creating the file "+ err.message)
+          }
+      });
   });
 }
