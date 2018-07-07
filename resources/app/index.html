@@ -6,6 +6,7 @@
       <link rel="stylesheet" href="css/style.css">
       <script type="text/javascript" src="js/generator.js"></script>
       <script type="text/javascript" src="js/menue.js"></script>
+      <script type="text/javascript" src="js/out.js"></script>
   </head>
   <body onmousemove="dreiD(event)">
     <div id="rest">
@@ -554,12 +555,14 @@
       <div class="X minus"></div>
     </button>
 
-    <button type="button" id="save">
+    <button type="button" id="save" onclick="saveFile()">
       <img src="bilder/if_save_2561379.png">
     </button>
     <script>
       // You can also require other files to run in this process
-      require('./renderer.js')
+      require('./renderer.js');
+      const {ipcMain, BrowserWindow, session, dialog} = require('electron')
+      var fs = require('fs');
     </script>
   </body>
   <footer>
