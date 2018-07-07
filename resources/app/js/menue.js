@@ -442,11 +442,20 @@ function zeigerBS()
   }
 }
 
+var s_anzeigen = true;
 function sekzeiger_anz()
 {
   document.getElementById("sekanzeigenzeiger").classList.toggle("rechts");
   document.getElementById("s").classList.toggle("hide");
   document.getElementById("sekunden_anzeigen").classList.toggle("hide");
+  if (s_anzeigen)
+  {
+    s_anzeigen = false;
+  }
+  else
+  {
+      s_anzeigen = true;
+  }
 }
 
 var puls_an = false;

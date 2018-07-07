@@ -12,10 +12,15 @@ function gernireOutput()
   }
 
 
-  var markanzeigen_var1 = "";
+  var markanzeigen_var1 = " ";
   if(markanzeigen)
   {
-    markanzeigen_var1 ='.zwischenstriche {'+'width: 100%;'+'height: 100%;'+'background: none;'+'position: absolute;'+'}';
+    markanzeigen_var1 ='.zwischenstriche {\n'+
+    'width: 100%;\n'+
+    'height: 100%;\n'+
+    'background: none;\n'+
+    'position: absolute;\n'+
+    '}\n';
   }
 
   if (markBSanzeigen)
@@ -40,7 +45,7 @@ function gernireOutput()
   var markanzeigen_var2 = "";
   if (markanzeigen)
   {
-    markanzeigen_var2 ='<div class="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<divclass="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>';
+    markanzeigen_var2 ='<div class="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_gross striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>'+'<div class="zwischenstriche"><div class="strich_klein striche"></div></div>';
   }
 
   var zeigeranz_var = "";
@@ -52,29 +57,35 @@ function gernireOutput()
     harkig_var = "harkig";
   }
 
-  if(!document.getElementById("sekunden_anzeigen").classList.contains("hide"))
+  if(s_anzeigen)
   {
-    sekunden_var = '<div  id="s" class="zeigerfeld'+harkig_var+'</div>"><div class="zeiger" id="s_zeiger"></div></div>';
+    sekunden_var = '<div  id="s" class="zeigerfeld'+harkig_var+'">\n<div class="zeiger" id="s_zeiger"></div>\n</div>\n';
   }
 
   if (zeigeranz)
   {
-    zeigeranz_var = '<div id="analog">'+'<div  id="h" class="zeigerfeld"><div class="zeiger" id="h_zeiger" ></div></div>'+'<div  id="m" class="zeigerfeld"><div class="zeiger" id="m_zeiger"></div></div>'+sekunden_var+'<div id="kreis"></div>'+'</div>';
+    zeigeranz_var = '<div id="analog">\n'+
+    '<div  id="h" class="zeigerfeld"><div class="zeiger" id="h_zeiger" ></div></div>\n'+
+    '<div  id="m" class="zeigerfeld"><div class="zeiger" id="m_zeiger"></div></div>\n'+
+    sekunden_var+
+    '<div id="kreis"></div>\n'+
+    '</div>\n';
   }
 
+  var mark_abstand = parseInt(document.getElementById("radius_mark").value) -20;
 
   var textangezeigt_var = "";
   if (textangezeigt)
   {
-    textangezeigt_var = '#zeit {'+
-      'position: absolute;'+
-      'top: '+document.getElementById("hohe_zahlen").value+'px;'+
-      'width: 100%;'+
-      'font-size: '+document.getElementById("grosse_zahlen").value+'px;'+
-      'text-align: center;'+
-      'text-shadow: 0 0 '+schattentext_var+' '+document.getElementById("color_textschatten").value+';'+
-      'color: '+document.getElementById("color_zahlen").value+';'+
-      '</div>'+
+    textangezeigt_var = '#zeit {\n'+
+      'position: fixed;\n'+
+      'top: '+document.getElementById("hohe_zahlen").value+'px;\n'+
+      'left: 0;\n'+
+      'width: 100%;\n'+
+      'font-size: '+document.getElementById("grosse_zahlen").value+'px;\n'+
+      'text-align: center;\n'+
+      'text-shadow: 0 0 '+schattentext_var+' '+document.getElementById("color_textschatten").value+';\n'+
+      'color: '+document.getElementById("color_zahlen").value+';\n'+
     '}';
   }
 
@@ -186,7 +197,8 @@ function gernireOutput()
         'position: absolute;\n'+
       '}\n'+
 
-    +markanzeigen_var1+
+    markanzeigen_var1+
+
     '\n.zwischenstriche .strich_gross {\n'+
       'position: absolute;\n'+
       'top: 50%;\n'+
@@ -206,13 +218,13 @@ function gernireOutput()
     '}\n'+
 
     '.striche {\n'+
-      'margin-top: '+document.getElementById("radius_mark").value+';\n'+
+      'margin-top: '+mark_abstand+'px;\n'+
       'background: '+document.getElementById("color_mark").value+';\n'+
       'box-shadow: 0 0   '+markBSanzeigen_var+'px '+document.getElementById("color_BSmark").value+';\n'+
       'transition: all 0.5s;\n'+
     '}\n'+
 
-  textangezeigt_var+
+    textangezeigt_var+
 
       '#liveanzeige {\n'+
         'transition: all 0.2s;\n'+
@@ -221,11 +233,11 @@ function gernireOutput()
       '}\n'+
       '</style>\n'+
     '</head>\n'+
-    '<body \n'+dreidanz_var+'>\n'+
+    '<body'+dreidanz_var+'>\n'+
     '<div id="liveanzeige">\n'+
       '<div id="Uhr">\n'+
         markanzeigen_var2+
-      zeigeranz_var+
+        zeigeranz_var+
       '<div class="Generator_zahlen"><div id="digital">\n'+
         '<div id="zeit"></div>\n'+
       '</div></div>\n'+
@@ -237,7 +249,7 @@ function gernireOutput()
       'starten();\n'+
 
       'function starten() {\n'+
-        +markanzeigen_var3+'\n'+
+        markanzeigen_var3+'\n'+
         'setInterval(zeitAnzeigen , 1000);\n'+
       '}\n'+
 
