@@ -2,10 +2,10 @@ function gernireOutput()
 {
   if (zeigeranzBS)
   {
-    var zeigeranzBS_var = 0;
+    var zeigeranzBS_var = 15;
   }else
   {
-    var zeigeranzBS_var = 15;
+    var zeigeranzBS_var = 0;
   }
 
 
