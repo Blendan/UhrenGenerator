@@ -8,10 +8,11 @@ When your deon just hit Generate and coppy the code in a .html file.
 
 # Versions
 
-### Upcomming 1.0.1
+### 1.1.1
+- Bug Fixes
+
+### 1.1.0
 - save directly as file
-- new look
-- sliders instad of text boxes
 
 ### 1.0.0
 
