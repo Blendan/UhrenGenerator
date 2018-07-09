@@ -22,11 +22,11 @@ function gernireOutput()
 
   if (markBSanzeigen)
   {
-    var markBSanzeigen_var = 0;
+    var markBSanzeigen_var = 15;
   }
   else
   {
-    var markBSanzeigen_var = 15;
+    var markBSanzeigen_var = 0;
   }
 
   if (schattentext)
