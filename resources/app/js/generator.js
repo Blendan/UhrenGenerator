@@ -75,7 +75,7 @@ function GeneratorMaster()
   document.getElementById("colorBSmark_gen").innerHTML = farbe;
 
   grose = document.getElementById("radius_mark").value;
-  document.getElementById("obenmark_gen").innerHTML = grose + "px";
+  document.getElementById("obenmark_gen").innerHTML = grose-20 + "px";
 
   if (zeigeranzBS)
   {
