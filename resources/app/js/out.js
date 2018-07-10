@@ -51,7 +51,7 @@ function gernireOutput()
 
   if (sextra)
   {
-    harkig_var = "harkig";
+    harkig_var = " harkig";
   }
 
   if(s_anzeigen)
