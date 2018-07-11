@@ -330,7 +330,7 @@ function gernireOutput()
 function saveFile()
 {
   var fileName = "Clock.html";
-  alert("Plese Save as .html");
+  //alert("Plese Save as .html");
   require('electron').remote.dialog.showSaveDialog((fileName) => {
       if (fileName === undefined)
       {
@@ -338,7 +338,7 @@ function saveFile()
       }
 
       // fileName is a string that contains the path and filename created in the save file dialog.
-      fs.writeFile(fileName, gernireOutput(), (err) => {
+      fs.writeFile(fileName+".html", gernireOutput(), (err) => {
           if(err)
           {
               alert("An error ocurred creating the file "+ err.message)
