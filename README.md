@@ -10,6 +10,7 @@ When your deon just hit Generate and coppy the code in a .html file.
 
 ### 1.1.3
 - New Look
+- .html is now automatically added
 
 ### 1.1.2
 - Bug Fixes
