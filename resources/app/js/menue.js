@@ -7,13 +7,13 @@ function menueausmachen()
 
   if (menueausgemacht)
   {
-    document.getElementById("menue_off_machen").style.left = "80px";
+    document.getElementById("menue_off").style.left = "80px";
     document.getElementById("mode").style.left = "0px";
     menueausgemacht = false;
   }
   else
   {
-    document.getElementById("menue_off_machen").style.left = "-120px";
+    document.getElementById("menue_off").style.left = "-120px";
     document.getElementById("mode").style.left = "-200px";
     menueausgemacht = true ;
   }

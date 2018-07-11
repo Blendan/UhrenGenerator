@@ -231,31 +231,25 @@ footer {
   display: none;
 }
 
-#menue_off_machen {
+#menue_off{
   position: fixed;
   z-index: 80;
   left: 80px;
   top: 45%;
-  background: none;
-  border: none;
-  font-size: 150px;
-  transition: all 0.3s;
-}
-
-#menue_off_machen:hover {
-  margin-left: 100px;
-}
-
-#menue_off {
-  width: 150px;
-  height: 150px;
   background: black;
   border: 3px solid white;
   border-radius: 100%;
   color: white;
   padding: 0;
+  width: 150px;
+  height: 150px;
   text-align: center;
-  transition: all 0.5s;
+  font-size: 150px;
+  transition: all 0.3s;
+}
+
+#menue_off:hover {
+  margin-left: 100px;
 }
 
 #text_menue {
