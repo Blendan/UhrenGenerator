@@ -1,4 +1,4 @@
-# UhrenGenerrator
+# UhrenGenerator
 This Generator is abel to gererate you a Clock an give you the raw HTML code of the Clock.
 
 ## How to use
